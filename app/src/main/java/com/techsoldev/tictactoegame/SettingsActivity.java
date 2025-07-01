@@ -122,7 +122,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                composeEmail("Tic Tac Toe Feedback");
+                composeEmail(getString(R.string.tic_tac_toe_feedback));
 
                /*
                 try {
@@ -167,7 +167,7 @@ public class SettingsActivity extends AppCompatActivity {
         intent.setData(Uri.parse("mailto:abdullahsh123@hotmail.com")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(Intent.createChooser(intent, "Send feedback"));
+            startActivity(Intent.createChooser(intent, getString(R.string.send_feedback)));
         }
         } catch (ActivityNotFoundException e) {
             //TODO smth

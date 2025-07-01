@@ -427,7 +427,7 @@ public class OfflineGameActivity extends AppCompatActivity implements View.OnCli
                         }, 750);
 
 
-                       // Toast.makeText(this, "Player X wins", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(this, R.string.player_x_wins, Toast.LENGTH_SHORT).show();
                     }
 
                    else if(storeActivePlayer ==Player_0)
@@ -505,7 +505,7 @@ public class OfflineGameActivity extends AppCompatActivity implements View.OnCli
                                 celebrateDialog(1);
                             }
                         }, 750);
-                        //Toast.makeText(this, "Player 0 wins", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(this, R.string.player_0_wins, Toast.LENGTH_SHORT).show();
                     }
                     isGameActive = false;
                 }
@@ -527,7 +527,7 @@ public class OfflineGameActivity extends AppCompatActivity implements View.OnCli
         }
         if(check)
         {
-          //  Toast.makeText(getBaseContext(), "Match Draw", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(getBaseContext(), R.string.match_draw, Toast.LENGTH_SHORT).show();
             isGameActive = false;
             if(MyServices.SOUND_CHECK) {
                 final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);

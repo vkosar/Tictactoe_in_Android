@@ -44,14 +44,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Pick your side"
         android:layout_gravity="center"
+        android:layout_weight="1"
         android:fontFamily="@font/poppins_medium"
-        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/pick_your_side"
         android:textColor="#454545"
         android:textSize="20dp"
-        android:gravity="center"></TextView>
+        android:textStyle="bold"></TextView>
 
 
     <View
@@ -151,18 +151,18 @@
         android:id="@+id/ai_pick_side_continue_btn"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.85"
         android:layout_gravity="center"
-        android:padding="2dp"
-        android:gravity="center"
-        android:text="Continue"
-        android:textAllCaps="false"
-        android:textSize="21dp"
-        android:fontFamily="@font/poppins_medium"
-        android:textColor="#454545"
         android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_weight="0.85"
         android:background="@drawable/button_2"
-        android:layout_marginRight="110dp"></androidx.appcompat.widget.AppCompatButton>
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/_continue"
+        android:textAllCaps="false"
+        android:textColor="#454545"
+        android:textSize="21dp"></androidx.appcompat.widget.AppCompatButton>
 
     <View
         android:layout_width="match_parent"

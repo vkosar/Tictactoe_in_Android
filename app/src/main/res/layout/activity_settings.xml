@@ -50,19 +50,18 @@
         android:src="@drawable/splash_src"></ImageView>
 
 
-
     <TextView
         android:layout_width="wrap_content"
-        android:autoSizeMinTextSize="22dp"
         android:layout_height="0dp"
-        android:layout_weight="1.05"
-        android:text="Tic Tac Toe"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="30dp"
+        android:layout_weight="1.05"
+        android:autoSizeMinTextSize="22dp"
         android:fontFamily="@font/poppins_medium"
-        android:textColor="#505050"></TextView>
+        android:gravity="center"
+        android:text="@string/tic_tac_toe"
+        android:textColor="#505050"
+        android:textSize="30dp"
+        android:textStyle="bold"></TextView>
 
     <View
         android:layout_width="match_parent"
@@ -96,11 +95,11 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Vibration"
+            android:layout_gravity="center"
             android:layout_weight="3"
             android:fontFamily="@font/poppins_regular"
-            android:layout_gravity="center"
             android:gravity="center_vertical"
+            android:text="@string/vibration"
             android:textColor="@color/black"
             android:textSize="20dp"></TextView>
 
@@ -164,11 +163,11 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Sound"
+            android:layout_gravity="center"
             android:layout_weight="3"
             android:fontFamily="@font/poppins_regular"
-            android:layout_gravity="center"
             android:gravity="center_vertical"
+            android:text="@string/sound"
             android:textColor="@color/black"
             android:textSize="20dp"></TextView>
 
@@ -233,11 +232,11 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Rating"
+            android:layout_gravity="center"
             android:layout_weight="3"
             android:fontFamily="@font/poppins_regular"
-            android:layout_gravity="center"
             android:gravity="center_vertical"
+            android:text="@string/rating"
             android:textColor="@color/black"
             android:textSize="20dp"></TextView>
 
@@ -288,11 +287,11 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Feedback"
+            android:layout_gravity="center"
             android:layout_weight="3"
             android:fontFamily="@font/poppins_regular"
-            android:layout_gravity="center"
             android:gravity="center_vertical"
+            android:text="@string/feedback"
             android:textColor="@color/black"
             android:textSize="20dp"></TextView>
 

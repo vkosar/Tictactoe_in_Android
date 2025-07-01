@@ -44,7 +44,7 @@ public class AIGetPlayerNameActivity  extends AppCompatActivity implements View.
             public void onClick(View v) {
 
                 if (TextUtils.isEmpty(playerNameTxt.getText().toString())) {
-                    Toast.makeText(getBaseContext(), "Enter Name", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), R.string.enter_name, Toast.LENGTH_LONG).show();
                 } else {
 
                     playerName = playerNameTxt.getText().toString();

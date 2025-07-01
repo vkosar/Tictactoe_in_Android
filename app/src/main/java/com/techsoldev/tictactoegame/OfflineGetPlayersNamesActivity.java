@@ -63,7 +63,7 @@ public class OfflineGetPlayersNamesActivity extends AppCompatActivity implements
             public void onClick(View v) {
 
                 if (TextUtils.isEmpty(playerOneName.getText().toString())) {
-                    Toast.makeText(getBaseContext(), "Enter Name", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), R.string.enter_name, Toast.LENGTH_LONG).show();
                 } else {
                     islayout = false;
                     playerOneLayout.setVisibility(View.GONE);
@@ -89,7 +89,7 @@ public class OfflineGetPlayersNamesActivity extends AppCompatActivity implements
             public void onClick(View v) {
 
                 if (TextUtils.isEmpty(playerTwoName.getText().toString())) {
-                    Toast.makeText(getBaseContext(), "Enter Name", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), R.string.enter_name, Toast.LENGTH_LONG).show();
                 } else {
 
                     playerTwo = playerTwoName.getText().toString();
