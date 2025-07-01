@@ -1,5 +1,35 @@
 <resources>
     <string name="app_name">Tictactoe</string>
+    <string name="tic_tac_toe">Tic Tac Toe</string>
     <string name="starterservice">Tictactoe starter service</string>
     <string name="service_working">Service is working</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="ai_start_work">AI start work!!</string>
+    <string name="player_x_wins">Player X wins</string>
+    <string name="player_0_wins">Player 0 wins</string>
+    <string name="match_draw">Match Draw</string>
+    <string name="tic_tac_toe_feedback">Tic Tac Toe Feedback</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="pick_your_side">Pick your side</string>
+    <string name="_continue">Continue</string>
+    <string name="robot">Robot</string>
+    <string name="jason_b">Jason B.</string>
+    <string name="player_name">Player Name</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="next">Next</string>
+    <string name="choose_your_play_mode">Choose your play mode</string>
+    <string name="with_ai">With AI</string>
+    <string name="with_a_friend">With a friend</string>
+    <string name="player_one">Player One</string>
+    <string name="player_two">Player Two</string>
+    <string name="vibration">Vibration</string>
+    <string name="sound">Sound</string>
+    <string name="rating">Rating</string>
+    <string name="feedback">Feedback</string>
+    <string name="player_win_excl">Player Win!</string>
+    <string name="quit">Quit</string>
+    <string name="match_draw_excl">Match Draw!</string>
+    <string name="are_you_want_to_quit_ques">Are you want to quit?</string>
+    <string name="cancel">Cancel</string>
+    <string name="robot_win_excl">Robot Win!</string>
 </resources>

@@ -127,8 +127,6 @@ public class OfflineGameMenuActivity extends AppCompatActivity implements View.O
         int width = metrics.widthPixels;
         int height = metrics.heightPixels;
 
-        //  Toast.makeText(SplashActivity.this , "Screen height is : "+ height , Toast.LENGTH_SHORT).show();
-
         return height ;
     }
 

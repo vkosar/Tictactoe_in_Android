@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Крестики-нолики</string>
+    <string name="tic_tac_toe">Крестики-нолики</string>
+    <string name="starterservice">Служба запуска крестики-нолики</string>
+    <string name="service_working">Служба работает</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="ai_start_work">AI начал работу!!</string>
+    <string name="player_x_wins">Игрок X выиграл</string>
+    <string name="player_0_wins">Игрок 0 выиграл</string>
+    <string name="match_draw">Ничья</string>
+    <string name="tic_tac_toe_feedback">Отзыв об игре</string>
+    <string name="send_feedback">Послать отзыв</string>
+    <string name="pick_your_side">Выберите сторону</string>
+    <string name="_continue">Далее</string>
+    <string name="robot">Робот</string>
+    <string name="jason_b">Иван И.</string>
+    <string name="player_name">Имя игрока</string>
+    <string name="nick_name">Имя</string>
+    <string name="next">Далее</string>
+    <string name="choose_your_play_mode">Выберите режим игры</string>
+    <string name="with_ai">С роботом</string>
+    <string name="with_a_friend">С другом</string>
+    <string name="player_one">Игорк 1</string>
+    <string name="player_two">Игрок 2</string>
+    <string name="vibration">Вибрация</string>
+    <string name="sound">Звук</string>
+    <string name="rating">Рейтинг</string>
+    <string name="feedback">Отзыв</string>
+    <string name="player_win_excl">Игрок выиграл!</string>
+    <string name="quit">Выход</string>
+    <string name="match_draw_excl">Ничья!</string>
+    <string name="are_you_want_to_quit_ques">Хотите выйти?</string>
+    <string name="cancel">Отмена</string>
+    <string name="robot_win_excl">Робот выиграл!</string>
+</resources>

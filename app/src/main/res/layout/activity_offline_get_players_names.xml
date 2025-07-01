@@ -61,17 +61,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
             android:layout_marginLeft="40dp"
-            android:textSize="20dp"
-            android:textAllCaps="false"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_regular"
-            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:text="@string/player_one"
+            android:textAllCaps="false"
             android:textColor="#5C5C5C"
+            android:textSize="20dp"
 
-            android:text="Player One "></TextView>
+            android:textStyle="bold"></TextView>
 
         <View
             android:layout_width="match_parent"
@@ -82,18 +82,18 @@
             android:id="@+id/player_one_name_edttxt"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:singleLine="true"
             android:layout_marginLeft="40dp"
-            android:hint="Nick Name"
-            android:cursorVisible="true"
-            android:textColor="#5C5C5C"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1.5"
             android:backgroundTint="#373737"
-            android:textColorHint="#6E6E6E"
+            android:cursorVisible="true"
+            android:hint="@string/nick_name"
             android:maxLength="10"
             android:maxLines="1"
-            android:textSize="18dp"
-            android:layout_marginRight="40dp"
-            android:layout_weight="1.5"></EditText>
+            android:singleLine="true"
+            android:textColor="#5C5C5C"
+            android:textColorHint="#6E6E6E"
+            android:textSize="18dp"></EditText>
 
 
         <View
@@ -105,14 +105,14 @@
             android:id="@+id/player_one_btn"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.5"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_marginLeft="95dp"
+            android:layout_marginRight="95dp"
+            android:layout_weight="1.5"
             android:background="@drawable/button_1"
             android:fontFamily="@font/poppins_medium"
-            android:text="Next"
-            android:layout_marginRight="95dp"
-            android:layout_marginLeft="95dp"
+            android:gravity="center"
+            android:text="@string/next"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18dp"
@@ -151,16 +151,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textColor="#4C4C4C"
             android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
             android:layout_marginLeft="40dp"
-            android:textSize="20dp"
-            android:textAllCaps="false"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_regular"
-            android:textStyle="bold"
-            android:text="Player Two "></TextView>
+            android:gravity="center_vertical"
+            android:text="@string/player_two"
+            android:textAllCaps="false"
+            android:textColor="#4C4C4C"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
 
         <View
             android:layout_width="match_parent"
@@ -168,20 +168,20 @@
             android:layout_weight="0.5"></View>
 
         <EditText
-            android:singleLine="true"
-            android:maxLength="10"
-            android:textColor="#4C4C4C"
-            android:maxLines="1"
-            android:backgroundTint="#4C4C4C"
             android:id="@+id/player_two_name_edttxt"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginLeft="40dp"
-            android:hint="Nick Name"
-            android:textColorHint="#4C4C4C"
-            android:textSize="18dp"
             android:layout_marginRight="40dp"
-            android:layout_weight="1.5"></EditText>
+            android:layout_weight="1.5"
+            android:backgroundTint="#4C4C4C"
+            android:hint="@string/nick_name"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#4C4C4C"
+            android:textColorHint="#4C4C4C"
+            android:textSize="18dp"></EditText>
 
 
         <View
@@ -193,14 +193,14 @@
             android:id="@+id/player_two_btn"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.5"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_marginLeft="95dp"
+            android:layout_marginRight="95dp"
+            android:layout_weight="1.5"
             android:background="@drawable/button_1"
             android:fontFamily="@font/poppins_medium"
-            android:text="Next"
-            android:layout_marginRight="95dp"
-            android:layout_marginLeft="95dp"
+            android:gravity="center"
+            android:text="@string/next"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18dp"
