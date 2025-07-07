@@ -42,15 +42,22 @@
         <activity
             android:name=".SettingsActivity"
             android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.SENDTO" />
-            <data android:scheme="mailto" />
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <data android:scheme="mailto" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".AiGameActivity"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
         <activity
             android:name=".AiChooseSymbolActivity"
             android:exported="true" />
@@ -76,6 +83,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        -->
 
     </application>
 

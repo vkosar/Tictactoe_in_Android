@@ -1,7 +1,8 @@
 package com.techsoldev.tictactoegame.starter;
 
 import com.techsoldev.tictactoegame.R;
-import com.techsoldev.tictactoegame.OfflineGameMenuActivity;
+//import com.techsoldev.tictactoegame.OfflineGameMenuActivity;
+import com.techsoldev.tictactoegame.AiGameActivity;
 
 import android.app.ActivityOptions;
 import android.app.Notification;
@@ -162,7 +163,7 @@ public class StarterService extends Service {
         ImageView imageView = new ImageView(getApplicationContext());
         imageView.setImageResource(iconId);
         imageView.setOnClickListener((View v) -> {
-            startApp();
+            startStopApp();
         });
 
         FloatWindow
@@ -192,7 +193,7 @@ public class StarterService extends Service {
         FloatWindow.get().show();
     }
 
-    private void startApp() {
+    private void startStopApp() {
         if (MyApplication.isForeground()) {
             Log.i(TAG, "Stop application");
 
@@ -211,7 +212,7 @@ public class StarterService extends Service {
             }
 
             Intent intent = new Intent();
-            intent.setClass(this, OfflineGameMenuActivity.class);
+            intent.setClass(this, AiGameActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(
                     intent,

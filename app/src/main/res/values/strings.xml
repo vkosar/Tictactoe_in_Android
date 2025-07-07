@@ -32,4 +32,6 @@
     <string name="are_you_want_to_quit_ques">Are you want to quit?</string>
     <string name="cancel">Cancel</string>
     <string name="robot_win_excl">Robot Win!</string>
+    <string name="human">Human</string>
+    <string name="human_win_excl">Human Win!</string>
 </resources>
