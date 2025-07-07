@@ -32,4 +32,6 @@
     <string name="are_you_want_to_quit_ques">Хотите выйти?</string>
     <string name="cancel">Отмена</string>
     <string name="robot_win_excl">Робот выиграл!</string>
+    <string name="human">Человек</string>
+    <string name="human_win_excl">Человек выиграл!</string>
 </resources>

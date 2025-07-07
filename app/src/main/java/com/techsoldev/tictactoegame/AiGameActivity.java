@@ -46,7 +46,7 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
     private TextView playerOneWins, playerTwoWins;
     private TextView playerOneName;
 
-    Dialog dialog , drawdialog , robotdialog, quitdialog;
+    Dialog celebratedialog , drawdialog , robotdialog, quitdialog;
 
     int playerOneWinCount=0;
     int playerTwoWinCount=0;
@@ -79,7 +79,7 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
 
         setContentView(R.layout.activity_ai_game);
 
-        dialog = new Dialog(this);
+        celebratedialog = new Dialog(this);
         drawdialog = new Dialog(this);
         robotdialog = new Dialog(this);
         quitdialog = new Dialog(this);
@@ -135,6 +135,9 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
         playerTwoWins.setText(String.valueOf(playerTwoWinCount));
 
         playerOne = getIntent().getStringExtra("p1");
+        if (playerOne == null) {
+            playerOne = getResources().getString(R.string.human);
+        }
         PICK_SIDE = getIntent().getIntExtra("ps",0);
         playerOneName.setText(playerOne);
 
@@ -520,7 +523,7 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
                             public void run() {
 
                                 if(PICK_SIDE==Player_X) {
-                                    celebrateDialog(0);
+                                    celebrateDialogfun(0);
                                 }else if(PICK_SIDE!=Player_X) {
                                     robotDialogfun();
                                 }
@@ -605,7 +608,7 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
                             public void run() {
 
                                 if(PICK_SIDE==Player_0) {
-                                    celebrateDialog(1);
+                                    celebrateDialogfun(1);
                                 }else if(PICK_SIDE!=Player_0) {
                                     robotDialogfun();
                                 }
@@ -639,25 +642,27 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
                 final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
                 mp.start();
             }
-            DrawDialogfun();
+            drawDialogfun();
 
         }
     }
 
 
-    private void celebrateDialog(int player_check) {
+    private void celebrateDialogfun(int player_check) {
 
 
-        dialog.setContentView(R.layout.celebrate_dialog);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.setCanceledOnTouchOutside(false);
+        celebratedialog.setContentView(R.layout.celebrate_dialog);
+        celebratedialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        celebratedialog.setCanceledOnTouchOutside(false);
 
+        TextView celebrateTextView = (TextView)celebratedialog.findViewById(R.id.celebrate_text);
+        celebrateTextView.setText(R.string.human_win_excl);
 
-        LottieAnimationView animationView = dialog.findViewById(R.id.celebrate_animationView);
-        LinearLayout linearLayout = dialog.findViewById(R.id.container_1);
-        Button quitBtn = dialog.findViewById(R.id.offline_game_quit_btn);
-        Button continueBtn = dialog.findViewById(R.id.offline_game_continue_btn);
-        ImageView playerImg = dialog.findViewById(R.id.offline_game_player_img);
+        LottieAnimationView animationView = celebratedialog.findViewById(R.id.celebrate_animationView);
+        LinearLayout linearLayout = celebratedialog.findViewById(R.id.container_1);
+        Button quitBtn = celebratedialog.findViewById(R.id.offline_game_quit_btn);
+        Button continueBtn = celebratedialog.findViewById(R.id.offline_game_continue_btn);
+        ImageView playerImg = celebratedialog.findViewById(R.id.offline_game_player_img);
 
 
 
@@ -682,9 +687,12 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
         quitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.dismiss();
+                celebratedialog.dismiss();
+                /*
                 Intent intent = new Intent(AiGameActivity.this, OfflineGameMenuActivity.class);
                 startActivity(intent);
+                */
+                Quit();
             }
         });
 
@@ -692,15 +700,15 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.dismiss();
+                celebratedialog.dismiss();
                 Restart();
             }
         });
 
-        dialog.show();
+        celebratedialog.show();
     }
 
-    private void    DrawDialogfun() {
+    private void    drawDialogfun() {
 
 
         drawdialog.setContentView(R.layout.draw_dialog);
@@ -715,8 +723,11 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View v) {
                 drawdialog.dismiss();
+                /*
                 Intent intent = new Intent(AiGameActivity.this, OfflineGameMenuActivity.class);
                 startActivity(intent);
+                */
+                Quit();
             }
         });
 
@@ -747,8 +758,11 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View v) {
                 robotdialog.dismiss();
+                /*
                 Intent intent = new Intent(AiGameActivity.this, OfflineGameMenuActivity.class);
                 startActivity(intent);
+                */
+                Quit();
             }
         });
 
@@ -779,8 +793,11 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View v) {
                 quitdialog.dismiss();
+                /*
                 Intent intent = new Intent(AiGameActivity.this, OfflineGameMenuActivity.class);
                 startActivity(intent);
+                */
+                Quit();
             }
         });
 
@@ -796,7 +813,6 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
 
     private void Restart()
     {
-
         for(int i =0 ;i<=8;i++){
             filledPos[i]= -1;
         }
@@ -825,9 +841,17 @@ public class AiGameActivity extends AppCompatActivity implements View.OnClickLis
 
         isGameActive =true;
 
-      if(ActivePlayer != PICK_SIDE) {
-          AI();
-      }
+        ActivePlayer = PICK_SIDE;
+        storeActivePlayer = PICK_SIDE;
 
+        /*
+        if(ActivePlayer != PICK_SIDE) {
+            AI();
+        }
+        */
+    }
+
+    private void Quit() {
+        finish();
     }
 }
